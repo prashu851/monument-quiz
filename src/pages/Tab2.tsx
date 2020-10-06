@@ -11,7 +11,6 @@ const Tab2: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <CardBack />
       </IonContent>
     </IonPage>
   );

@@ -8,6 +8,7 @@ import './Card.css';
 interface ContainerProps {
     data: any;
     onQuizFinish: any;
+
 }
 
 export const Card: React.FC<ContainerProps> = ({data, onQuizFinish}) => {
@@ -26,13 +27,14 @@ export const Card: React.FC<ContainerProps> = ({data, onQuizFinish}) => {
             // @ts-ignore
             backRef.current.animation.play();
         });
+        
     };
 
     return (
         <div key={data.name}>
             {showDivOne ?
                 <CreateAnimation
-                    duration={1500}
+                    duration={1000}
                     iterations={1}
                     ref={frontRef}
                     fromTo={[
@@ -48,7 +50,7 @@ export const Card: React.FC<ContainerProps> = ({data, onQuizFinish}) => {
 
             {showDivTwo ?
                 <CreateAnimation
-                    duration={1500}
+                    duration={1000}
                     iterations={1}
                     ref={backRef}
                     fromTo={[
@@ -56,7 +58,7 @@ export const Card: React.FC<ContainerProps> = ({data, onQuizFinish}) => {
                     ]}
                 >
                     <div className="card-back">
-                        <CardBack data={data} onQuizFinish={onQuizFinish}/>
+                        <CardBack data={data} onQuizFinish={onQuizFinish} />
                     </div>
                 </CreateAnimation>
                 : ''
