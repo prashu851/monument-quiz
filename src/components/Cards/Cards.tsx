@@ -40,7 +40,7 @@ const quizDeck = [
     {
         name :'Chichen Itza',
         image: 'https://picsum.photos/id/240/200/300',
-        description:'Chichen Itza[nb 1] was a large pre-Columbian city built by the Maya people of the Terminal Classic period. The archaeological site is located in Tinúm Municipality, Yucatán State, Mexico. Chichen Itza was a major focal point in the Northern Maya Lowlands from the Late Classic (c. AD 600–900) through the Terminal Classic (c. AD 800–900) and into the early portion of the Postclassic period (c. AD 900–1200). T',
+        description:'Chichen Itza[nb 1] was a large pre-Columbian city built by the Maya people of the Terminal Classic period. The archaeological site is located in Tinúm Municipality, Yucatán State, Mexico. Chichen Itza was a major focal point in the Northern Maya Lowlands from the Late Classic (c. AD 600–900) through the Terminal Classic (c. AD 800–900) and into the early portion of the Postclassic period (c. AD 900–1200).',
         location:'Yucatan, Mexico',
         examined: false
     },
@@ -67,7 +67,7 @@ const quizDeck = [
     },
     {
         name :'Gateway of India',
-        image: 'https://picsum.photos/id/243/200/300',
+        image: 'https://picsum.photos/id/244/200/300',
         description:'The Gateway of India is an arch-monument built in the early twentieth century in the city of Mumbai, in the Indian state of Maharashtra. It was erected to commemorate the landing in December 1911 at Apollo Bunder, Mumbai (then Bombay) of King-Emperor George V and Queen-Empress Mary, the first British monarch to visit India. At the time of the royal visit, the gateway was not yet built, and a cardboard structure greeted the monarch. ',
         location:'Mumbai',
         examined: false
@@ -101,6 +101,7 @@ export const Cards : React.FC = () => {
     const currentCard = getQuizCard()
     return(
         <>
+        
         {currentCard !== undefined?
         <Card key={currentCard.name} data={currentCard} onQuizFinish={onQuizFinish} />:
         <Score score={score} />

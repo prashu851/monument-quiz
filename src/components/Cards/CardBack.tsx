@@ -66,11 +66,11 @@ const CardBack: React.FC<ContainerProps> = ({data, onQuizFinish}) => {
         >
           <div>
             <IonCard className="card-back-container">
-              <IonCardContent>
+              <IonCardContent className="card-content">
                 <h1>{data.name}</h1>
-                {data.description}<br />  
-                <IonIcon icon={location} />
-                {data.location}<br />
+                <p className="mon-desc">{data.description}</p>  
+                <p className="mon-loc"><IonIcon icon={location} />
+                {data.location}</p><br />
             </IonCardContent>
             </IonCard>
           </div>
