@@ -1,0 +1,12 @@
+.card-front {
+    backface-visibility: hidden;
+}
+
+.card-back {
+    backface-visibility: hidden;
+    /*transform: rotateY(180deg);*/
+}
+.card-img{
+    width:100%;
+    height:300px;
+}
